@@ -16,7 +16,7 @@ const questions = [
       },
       {
         type: 'input',
-        name: 'technologies used',
+        name: 'technologies',
         message: 'What technologies are being used in this project?'
       },
       {
@@ -57,8 +57,44 @@ function writeToFile(fileName, data) {
     });
   }
   
-// TODO: Create a function to initialize app
-function init() {}
+// Function to initialize app
+function init() {
+    inquirer
+    .prompt(questions)
+    .then((answers) => {
+      // Generate the README content using the provided answers
+      const readmeContent = `
+# ${answers.projectTitle}
+
+## Description
+${answers.description}
+
+## Technologies Used
+${answers.technologies}
+
+## Installation
+${answers.installation}
+
+## Test
+${answers.test}
+
+## Licenses
+${answers.license}
+
+## GitHub
+${answers.github}
+
+## Email
+${answers.email}
+`;
+
+      // Write the README file
+      writeToFile('README.md', readmeContent);
+    })
+    .catch((error) => {
+      console.error('Error occurred:', error);
+    });
+}
 
 // Function call to initialize app
 init();
