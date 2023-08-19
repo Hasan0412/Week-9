@@ -16,13 +16,18 @@ const questions = [
       },
       {
         type: 'input',
-        name: 'technologies',
-        message: 'What technologies are being used in this project?'
+        name: 'installation',
+        message: 'Provide the installation instructions:'
       },
       {
         type: 'input',
-        name: 'installation',
-        message: 'Provide the installation instructions:'
+        name: 'usage',
+        message: 'What is the use of this project?'
+      },
+      {
+        type: 'input',
+        name: 'contribution',
+        message: 'Please add any contributions:'
       },
       {
         type: 'input',
@@ -69,11 +74,14 @@ function init() {
 ## Description
 ${answers.description}
 
-## Technologies Used
-${answers.technologies}
-
 ## Installation
 ${answers.installation}
+
+## Usage
+${answers.usage}
+
+## Contributions
+${answers.contribution}
 
 ## Test
 ${answers.test}
