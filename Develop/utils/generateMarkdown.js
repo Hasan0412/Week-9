@@ -69,11 +69,11 @@ ${data.test}
 ## Licenses
 ${licenseSection}
 
-## GitHub
-${data.github}
+## Questions
+If you have any questions or want to discuss about this project, feel free to reach out to me!
 
-## Email
-${data.email}
+- GitHub: [${data.github}](https://github.com/${data.github})
+- Email: [${data.email}](mailto:${data.email})
 `;
 }
 
