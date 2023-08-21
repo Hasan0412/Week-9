@@ -73,7 +73,7 @@ function init() {
       const readmeContent = generateMarkdown(answers);
       
       // Write the README file
-      writeToFile('README.md', readmeContent);
+      writeToFile('READMEexample.md', readmeContent);
     })
     .catch((error) => {
       console.error('Error occurred:', error);
